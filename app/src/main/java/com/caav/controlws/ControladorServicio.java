@@ -51,7 +51,7 @@ public class ControladorServicio {
     }
 
     //Para obtener Materia de php.
-    public static List<Materia> obtenerMateriasExterno(String json,Context ctx){
+    public static List<Materia> obtenerMaterias(String json,Context ctx){
         List<Materia> listaMaterias = new ArrayList<Materia>();
         try{
             JSONArray materiaJSON = new JSONArray(json);
@@ -71,7 +71,7 @@ public class ControladorServicio {
     }
 
     //Para insertar nota en php.
-    public static void insertarNotaExterno(String peticion, Context ctx){
+    public static void insertarNota(String peticion, Context ctx){
         String json = obtenerRespuestaPeticion(peticion, ctx);
         try{
             JSONObject resultado = new JSONObject(json);
