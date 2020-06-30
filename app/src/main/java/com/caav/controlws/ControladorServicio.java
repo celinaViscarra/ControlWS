@@ -88,6 +88,7 @@ public class ControladorServicio {
         }
     }
 
+    //Funcion especial.
     //Obtener promedio.
     public static String obtenerPromedioJSON(String json, Context ctx){
         try{
