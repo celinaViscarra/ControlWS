@@ -2,6 +2,7 @@ package com.caav.controlws;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
+@SuppressLint("NewApi")
 public class ActualizarMateriaActivity extends AppCompatActivity {
     ControlBDAlumno db;
     static List<Materia> listaMaterias; //
@@ -23,8 +25,9 @@ public class ActualizarMateriaActivity extends AppCompatActivity {
     ListView listaViewMaterias;
 
     //URL.
-    private final String urlLocal ="http://192.168.1.8/AV12013//ws_db_materia_fecha.php";
+    private final String urlLocal ="http://192.168.1.8/av12013/ws_db_materia_fecha.php?day=%s&month=%s&year=%s";
 
+    @SuppressLint("NewApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
