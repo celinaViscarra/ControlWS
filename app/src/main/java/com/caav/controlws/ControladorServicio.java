@@ -15,6 +15,7 @@ import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -74,10 +75,33 @@ public class ControladorServicio {
         String json = obtenerRespuestaPeticion(peticion, ctx);
         try{
             JSONObject resultado = new JSONObject(json);
-
-
+            Toast.makeText(ctx, "Registro ingresado"+
+                    resultado.getJSONArray("resultado").toString(),
+                    Toast.LENGTH_LONG).show();
+            int respuesta = resultado.getInt("resultado");
+            if(respuesta==1)
+                Toast.makeText(ctx, "Registro ingresado", Toast.LENGTH_LONG).show();
+            else
+                Toast.makeText(ctx, "Error registro duplicado", Toast.LENGTH_LONG).show();
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    //Obtener promedio.
+    public static String obtenerPromedioJSON(String json, Context ctx){
+        try{
+            JSONArray objs = new JSONArray(json);
+            if (objs.length() != 0){
+                //Nota final promedio.
+                return objs.getJSONObject(0).getString("Promedio");
+            }else {
+                Toast.makeText(ctx, "Error carnet no existe", Toast.LENGTH_LONG).show();
+                return "";
+            }
+        }catch (JSONException e){
+            Toast.makeText(ctx, "Error con la respuesta JSON", Toast.LENGTH_LONG).show();
+            return "";
         }
     }
 }
