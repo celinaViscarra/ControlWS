@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:weightSum="1">
+
+    <Button
+        android:id="@+id/button_materia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="lanzarActividad"
+        android:text="@string/actualizar_materia"
+        android:layout_weight="0.10" />
+
+    <Button
+        android:id="@+id/button_alumno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="lanzarActividad"
+        android:text="@string/promedio_alumno"
+        android:layout_weight="0.06" />
+
+    <Button
+        android:id="@+id/button_ingresarNota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="lanzarActividad"
+        android:text="@string/ingresar_nota"
+        android:layout_weight="0.06" />
+
+    <Button
+        android:id="@+id/button_actualizarNota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="lanzarActividad"
+        android:text="@string/actualizar_nota"
+        android:layout_weight="0.06" />
+
+    <Button
+        android:id="@+id/button_consultarNota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="lanzarActividad"
+        android:text="@string/consultar_nota"
+        android:layout_weight="0.06" />
+
+    <Button
+        android:id="@+id/button_eliminarNota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="lanzarActividad"
+        android:text="@string/eliminar_nota"
+        android:layout_weight="0.06" />
+</LinearLayout>

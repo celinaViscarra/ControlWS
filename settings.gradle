@@ -1,0 +1,2 @@
+rootProject.name='ControlWS2'
+include ':app'
