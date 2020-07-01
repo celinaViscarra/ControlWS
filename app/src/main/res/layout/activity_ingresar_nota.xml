@@ -77,7 +77,7 @@
     </TableRow>
 
         <Button
-            android:onClick="guardarServicio"
+            android:onClick="insertarNota"
             android:text="@string/servicio_PHPlocal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
