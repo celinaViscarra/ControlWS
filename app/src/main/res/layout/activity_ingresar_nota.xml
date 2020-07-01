@@ -1,9 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IngresarNotaActivity">
+    tools:context=".IngresarNotaActivity"
+    android:orientation="vertical"
+    android:id="@+id/LinearLayout2">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/tableRow1">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/textView2"
+                android:text="@string/carnet"/>
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/editText_notaCarnet"
+                android:ems="10">
+                <requestFocus/>
+            </EditText>
+        </TableRow>
+
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/tableRow2">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/TextView02"
+            android:text="@string/cod_materia"/>
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/editText_notaMateria"
+            android:ems="10"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/tableRow3">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/TextView01"
+            android:text="@string/ciclo"/>
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/editText_notaCiclo"
+            android:ems="10"/>
+    </TableRow>
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/tableRow4">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/textView1"
+            android:text="@string/nota_final"/>
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/editText_notaFinal"
+            android:ems="10"/>
+    </TableRow>
+
+        <Button
+            android:onClick="guardarServicio"
+            android:text="@string/servicio_PHPlocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </TableLayout>
+</LinearLayout>

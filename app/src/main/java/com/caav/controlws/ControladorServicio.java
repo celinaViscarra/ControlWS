@@ -58,9 +58,10 @@ public class ControladorServicio {
             for(int i=0; i<materiaJSON.length(); i++){
                 JSONObject object = materiaJSON.getJSONObject(i);
                 Materia materia = new Materia();
-                materia.setCodmateria(object.getString("codmateria"));
-                materia.setNommateria(object.getString("nommateria"));
-                materia.setUnidadesval(object.getString("unidadesval"));
+                //tienen que ir los nombres de las columnas en mayusculas.
+                materia.setCodmateria(object.getString("CODMATERIA"));
+                materia.setNommateria(object.getString("NOMMATERIA"));
+                materia.setUnidadesval(object.getString("UNIDADESVAL"));
                 listaMaterias.add(materia);
             }
             return listaMaterias;
