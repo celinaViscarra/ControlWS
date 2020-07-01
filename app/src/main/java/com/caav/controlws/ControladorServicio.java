@@ -96,7 +96,7 @@ public class ControladorServicio {
             JSONArray objs = new JSONArray(json);
             if (objs.length() != 0){
                 //Nota final promedio.
-                return objs.getJSONObject(0).getString("Promedio");
+                return objs.getJSONObject(0).getString("PROMEDIO");
             }else {
                 Toast.makeText(ctx, "Error carnet no existe", Toast.LENGTH_LONG).show();
                 return "";

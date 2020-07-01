@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -30,7 +31,8 @@ public class PromedioAlumnoActivity extends AppCompatActivity {
     public void consultarPromedio(View v){
         String carnet = carnetTxt.getText().toString();
         String url = urlLocal + "?carnet=" + carnet;
-        String notaPromedio = ControladorServicio.obtenerPromedioJSON(url, this);
+        String notaPromedio = ControladorServicio.obtenerRespuestaPeticion(url, this);
+        Log.v("Respuesta", notaPromedio);
         notaPromedioTxt.setText("Nota Promedio: " + ControladorServicio.obtenerPromedioJSON(notaPromedio, this));
     }
 }
