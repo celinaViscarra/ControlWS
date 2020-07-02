@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
                     i = new Intent(this,IngresarNotaActivity.class);
                     break;
             case R.id.button_actualizarNota:
+                i = new Intent(this, ActualizarNotaActivity.class);
                 break;
             case R.id.button_consultarNota:
                 break;

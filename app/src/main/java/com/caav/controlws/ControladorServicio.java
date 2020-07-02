@@ -89,6 +89,11 @@ public class ControladorServicio {
         }
     }
 
+    //Para actualizar nota en php.
+    public static void actualizarNota(String peticion, Context ctx){
+
+    }
+
     //Funcion especial.
     //Obtener promedio.
     public static String obtenerPromedioJSON(String json, Context ctx){
@@ -106,4 +111,5 @@ public class ControladorServicio {
             return "";
         }
     }
+
 }
