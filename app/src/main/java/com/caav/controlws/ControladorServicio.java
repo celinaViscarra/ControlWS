@@ -124,6 +124,25 @@ public class ControladorServicio {
         }
     }
 
+    //Para eliminar nota en php.
+    public static void eliminarNota(String peticion, Context ctx){
+        String json = obtenerRespuestaPeticion(peticion, ctx);
+        try{
+            JSONObject resultado = new JSONObject(json);
+            Toast.makeText(ctx, "Registro eliminado"+
+                            resultado.getJSONArray("resultado").toString(),
+                    Toast.LENGTH_LONG).show();
+            int respuesta = resultado.getInt("resultado");
+            if(respuesta==1)
+                Toast.makeText(ctx, "Registro eliminado", Toast.LENGTH_LONG).show();
+            else
+                Toast.makeText(ctx, "Error", Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
     //Funcion especial.
     //Obtener promedio.
     public static String obtenerPromedioJSON(String json, Context ctx){
