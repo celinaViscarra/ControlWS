@@ -95,9 +95,9 @@ public class ControladorServicio {
         try{
             JSONObject resultado = new JSONObject(json);
             Toast.makeText(ctx, "Registro actualizado"+
-                            resultado.getJSONArray("resultado").toString(),
+                            resultado.getJSONArray("RESULTADO").toString(),
                     Toast.LENGTH_LONG).show();
-            int respuesta = resultado.getInt("resultado");
+            int respuesta = resultado.getInt("RESULTADO");
             if(respuesta==1)
                 Toast.makeText(ctx, "Registro actualizado", Toast.LENGTH_LONG).show();
             else
