@@ -9,16 +9,14 @@
     android:id="@+id/LinearLayout5">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView03"
-            android:text="@string/carnet"
-            android:layout_weight="1" />
+            android:text="@string/carnet" />
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/editText_alumnoCarnet"
-            android:layout_weight="1"
             android:ems="10">
             <requestFocus/>
         </EditText>

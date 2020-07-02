@@ -30,8 +30,10 @@ public class MainActivity extends AppCompatActivity {
                 i = new Intent(this, ActualizarNotaActivity.class);
                 break;
             case R.id.button_consultarNota:
+                i = new Intent(this, ConsultarNotaActivity.class);
                 break;
             case R.id.button_eliminarNota:
+                i = new Intent(this, EliminarNotaActivity.class);
                 break;
         } if(i!=null)
             startActivity(i);

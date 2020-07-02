@@ -11,8 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EliminarNotaActivity"></activity>
-        <activity android:name=".ConsultarNotaActivity" />
+        <activity android:name=".ConsultarNotaActivity"></activity>
+        <activity android:name=".EliminarNotaActivity" />
         <activity android:name=".ActualizarNotaActivity" />
         <activity android:name=".IngresarNotaActivity" />
         <activity android:name=".ActualizarMateriaActivity" />
