@@ -149,10 +149,10 @@ public class ControladorServicio {
         try{
             JSONArray objs = new JSONArray(json);
             if (objs.length() != 0){
-                //Nota final promedio.
+                //Promedio.
                 return objs.getJSONObject(0).getString("PROMEDIO");
             }else {
-                Toast.makeText(ctx, "Error carnet no existe", Toast.LENGTH_LONG).show();
+                Toast.makeText(ctx, "Error, no existe", Toast.LENGTH_LONG).show();
                 return "";
             }
         }catch (JSONException e){
@@ -161,4 +161,66 @@ public class ControladorServicio {
         }
     }
 
+    public static String obtenerMaxJSON(String json, Context ctx){
+        try{
+            JSONArray objs = new JSONArray(json);
+            if (objs.length() != 0){
+                //Maximo
+                return objs.getJSONObject(0).getString("MAXIMO");
+                Toast.makeText(ctx, "Error, no existe", Toast.LENGTH_LONG).show();
+                return "";
+            }
+        }catch (JSONException e){
+            Toast.makeText(ctx, "Error con la respuesta JSON", Toast.LENGTH_LONG).show();
+            return "";
+        }
+    }
+
+    public static String obtenerMinJSON(String json, Context ctx){
+        try{
+            JSONArray objs = new JSONArray(json);
+            if (objs.length() != 0){
+                //Minimo
+                return objs.getJSONObject(0).getString("MINIMO");
+            }else {
+                Toast.makeText(ctx, "Error, no existe", Toast.LENGTH_LONG).show();
+                return "";
+            }
+        }catch (JSONException e){
+            Toast.makeText(ctx, "Error con la respuesta JSON", Toast.LENGTH_LONG).show();
+            return "";
+        }
+    }
+
+    public static String obtenerCountJSON(String json, Context ctx){
+        try{
+            JSONArray objs = new JSONArray(json);
+            if (objs.length() != 0){
+                //Count.
+                return objs.getJSONObject(0).getString("CONTEO");
+            }else {
+                Toast.makeText(ctx, "Error, no existe", Toast.LENGTH_LONG).show();
+                return "";
+            }
+        }catch (JSONException e){
+            Toast.makeText(ctx, "Error con la respuesta JSON", Toast.LENGTH_LONG).show();
+            return "";
+        }
+    }
+
+    public static String obtenerSumatoriaJSON(String json, Context ctx){
+        try{
+            JSONArray objs = new JSONArray(json);
+            if (objs.length() != 0){
+                //Sumatoria.
+                return objs.getJSONObject(0).getString("SUMATORIA");
+            }else {
+                Toast.makeText(ctx, "Error, no existe", Toast.LENGTH_LONG).show();
+                return "";
+            }
+        }catch (JSONException e){
+            Toast.makeText(ctx, "Error con la respuesta JSON", Toast.LENGTH_LONG).show();
+            return "";
+        }
+    }
 }
