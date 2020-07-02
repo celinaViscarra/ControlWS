@@ -15,7 +15,7 @@ public class PromedioAlumnoActivity extends AppCompatActivity {
     EditText carnetTxt;
     TextView notaPromedioTxt;
     //URL.
-    private final String urlLocal ="http://192.168.1.8/av12013/ws_db_carnet_group.php";
+    private final String urlLocal ="http://192.168.1.8/av12013/ws_promedio.php";
 
     @SuppressLint("NewApi")
     @Override
@@ -31,8 +31,8 @@ public class PromedioAlumnoActivity extends AppCompatActivity {
     public void consultarPromedio(View v){
         String carnet = carnetTxt.getText().toString();
         String url = urlLocal + "?carnet=" + carnet;
-        String notaPromedio = ControladorServicio.obtenerRespuestaPeticion(url, this);
-        Log.v("Respuesta", notaPromedio);
-        notaPromedioTxt.setText("Nota Promedio: " + ControladorServicio.obtenerPromedioJSON(notaPromedio, this));
+        String promedio = ControladorServicio.obtenerRespuestaPeticion(url, this);
+        Log.v("Respuesta", promedio);
+        notaPromedioTxt.setText("Nota Promedio: " + ControladorServicio.obtenerPromedioJSON(promedio, this));
     }
 }
