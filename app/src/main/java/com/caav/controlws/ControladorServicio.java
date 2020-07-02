@@ -108,20 +108,19 @@ public class ControladorServicio {
     }
 
     //Para consultar nota en php.
-    public static void consultarNota(String peticion, Context ctx){
-        String json = obtenerRespuestaPeticion(peticion, ctx);
+    public static String consultarNota(String json, Context ctx){
         try{
-            JSONObject resultado = new JSONObject(json);
-            Toast.makeText(ctx, "Registro actualizado"+
-                            resultado.getJSONArray("RESULTADO").toString(),
-                    Toast.LENGTH_LONG).show();
-            int respuesta = resultado.getInt("RESULTADO");
-            if(respuesta==1)
-                Toast.makeText(ctx, "Registro actualizado", Toast.LENGTH_LONG).show();
-            else
-                Toast.makeText(ctx, "Error", Toast.LENGTH_LONG).show();
-        } catch (Exception e) {
-            e.printStackTrace();
+            JSONArray objs = new JSONArray(json);
+            if (objs.length() != 0){
+                //Nota final promedio.
+                return objs.getJSONObject(0).getString("NOTAFINAL");
+            }else {
+                Toast.makeText(ctx, "Error carnet no existe", Toast.LENGTH_LONG).show();
+                return "";
+            }
+        }catch (JSONException e){
+            Toast.makeText(ctx, "Error con la respuesta JSON", Toast.LENGTH_LONG).show();
+            return "";
         }
     }
 
