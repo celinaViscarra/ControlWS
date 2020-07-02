@@ -20,12 +20,24 @@ public class MainActivity extends AppCompatActivity {
             case R.id.button_materia:
                 i = new Intent(this,ActualizarMateriaActivity.class);
                 break;
-            case R.id.button_alumno:
-                    i = new Intent(this,PromedioAlumnoActivity.class);
+            case R.id.button_avgAlumno:
+                i = new Intent(this,PromedioAlumnoActivity.class);
+                break;
+            case R.id.button_maxAlumno:
+                i = new Intent(this, MaximoAlumnoActivity.class);
+                break;
+            case R.id.button_minAlumno:
+                i = new Intent(this, MinimoAlumnoActivity.class);
+                break;
+            case R.id.button_sumAlumno:
+                i = new Intent(this, SumatoriaAlumnoActivity.class);
+                break;
+            case R.id.button_countAlumno:
+                i = new Intent(this, CountAlumnoActivity.class);
                 break;
             case R.id.button_ingresarNota:
-                    i = new Intent(this,IngresarNotaActivity.class);
-                    break;
+                i = new Intent(this,IngresarNotaActivity.class);
+                break;
             case R.id.button_actualizarNota:
                 i = new Intent(this, ActualizarNotaActivity.class);
                 break;

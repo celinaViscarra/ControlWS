@@ -17,11 +17,43 @@
         android:layout_weight="0.10" />
 
     <Button
-        android:id="@+id/button_alumno"
+        android:id="@+id/button_avgAlumno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="lanzarActividad"
         android:text="@string/promedio_alumno"
+        android:layout_weight="0.06" />
+
+    <Button
+        android:id="@+id/button_maxAlumno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="lanzarActividad"
+        android:text="@string/max_alumno"
+        android:layout_weight="0.06" />
+
+    <Button
+        android:id="@+id/button_minAlumno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="lanzarActividad"
+        android:text="@string/min_alumno"
+        android:layout_weight="0.06" />
+
+    <Button
+        android:id="@+id/button_sumAlumno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="lanzarActividad"
+        android:text="@string/sum_alumno"
+        android:layout_weight="0.06" />
+
+    <Button
+        android:id="@+id/button_countAlumno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="lanzarActividad"
+        android:text="@string/count_alumno"
         android:layout_weight="0.06" />
 
     <Button

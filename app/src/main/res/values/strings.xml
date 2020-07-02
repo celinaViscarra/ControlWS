@@ -8,6 +8,10 @@
 
     <!-- OTRAS OPCIONES -->
     <string name="promedio_alumno">Promedio de Alumno</string>
+    <string name="sum_alumno">Sumatoria de Notas por Alumno</string>
+    <string name="min_alumno">Nota Minima de Alumno</string>
+    <string name="max_alumno">Nota Maxima de Alumno</string>
+    <string name="count_alumno">Conteo de Alumno</string>
     <string name="actualizar_materia">Actualizar Materias</string>
 
     <!-- DATOS -->
