@@ -25,11 +25,11 @@ public class CountAlumnoActivity extends AppCompatActivity {
         notaTxt = (TextView) findViewById(R.id.textView_alumnoNota);
     }
 
-    public void consultarSumatoria(View v) {
+    public void consultarCount(View v) {
         String carnet = carnetTxt.getText().toString();
         String url = urlLocal + "?carnet=" + carnet;
         String conteo = ControladorServicio.obtenerRespuestaPeticion(url, this);
         Log.v("Respuesta", conteo);
-        notaTxt.setText("Conteo: " + ControladorServicio.obtenerSumatoriaJSON(conteo, this));
+        notaTxt.setText("Conteo: " + ControladorServicio.obtenerCountJSON(conteo, this));
     }
 }

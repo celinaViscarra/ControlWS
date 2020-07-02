@@ -30,6 +30,6 @@ public class MaximoAlumnoActivity extends AppCompatActivity {
         String url = urlLocal + "?carnet=" + carnet;
         String maximo = ControladorServicio.obtenerRespuestaPeticion(url, this);
         Log.v("Respuesta", maximo);
-        notaTxt.setText("Maximo: " + ControladorServicio.obtenerMinJSON(maximo, this));
+        notaTxt.setText("Maximo: " + ControladorServicio.obtenerMaxJSON(maximo, this));
     }
 }
