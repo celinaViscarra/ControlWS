@@ -91,7 +91,20 @@ public class ControladorServicio {
 
     //Para actualizar nota en php.
     public static void actualizarNota(String peticion, Context ctx){
-
+        String json = obtenerRespuestaPeticion(peticion, ctx);
+        try{
+            JSONObject resultado = new JSONObject(json);
+            Toast.makeText(ctx, "Registro actualizado"+
+                            resultado.getJSONArray("resultado").toString(),
+                    Toast.LENGTH_LONG).show();
+            int respuesta = resultado.getInt("resultado");
+            if(respuesta==1)
+                Toast.makeText(ctx, "Registro actualizado", Toast.LENGTH_LONG).show();
+            else
+                Toast.makeText(ctx, "Error", Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     //Funcion especial.
