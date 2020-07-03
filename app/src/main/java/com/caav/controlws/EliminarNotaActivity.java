@@ -10,7 +10,7 @@ import android.widget.EditText;
 public class EliminarNotaActivity extends AppCompatActivity {
     EditText carnetTxt, codMateriaTxt, cicloTxt;
 
-    private final String urlLocal ="http://192.168.1.8/av12013/ws_nota_delete.php";
+    private final String urlLocal ="http://192.168.1.8/av12013/ws_dato_delete.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

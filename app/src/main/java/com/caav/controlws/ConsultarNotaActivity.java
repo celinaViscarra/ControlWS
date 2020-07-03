@@ -13,7 +13,7 @@ public class ConsultarNotaActivity extends AppCompatActivity {
     EditText carnetTxt, codMateriaTxt, cicloTxt;
     TextView notaTxt;
 
-    private final String urlLocal ="http://192.168.1.8/av12013/ws_nota_query.php";
+    private final String urlLocal ="http://192.168.1.8/av12013/ws_dato_query.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

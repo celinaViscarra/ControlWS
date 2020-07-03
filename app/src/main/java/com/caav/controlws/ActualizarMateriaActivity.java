@@ -19,13 +19,13 @@ import java.util.List;
 @SuppressLint("NewApi")
 public class ActualizarMateriaActivity extends AppCompatActivity {
     ControlBDAlumno db;
-    static List<Materia> listaMaterias; //
-    static List<String> nombreMaterias;
+    static List<Materia> listaMaterias; //Lista de producto a actualizar.
+    static List<String> nombreMaterias; //Lista con el primer atributo del producto.
     EditText fechaTxt;
-    ListView listaViewMaterias;
+    ListView listaViewMaterias; //Lista que se desplegara con los datos, a partir de la fecha indicada.
 
     //URL.
-    private final String urlLocal ="http://192.168.1.8/av12013/ws_db_materia_fecha.php?day=%s&month=%s&year=%s";
+    private final String urlLocal ="http://192.168.1.8/av12013/ws_tabla2_fecha.php?day=%s&month=%s&year=%s";
 
     @SuppressLint("NewApi")
     @Override

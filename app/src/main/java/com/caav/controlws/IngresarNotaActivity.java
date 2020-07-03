@@ -15,7 +15,7 @@ import org.json.JSONObject;
 public class IngresarNotaActivity extends AppCompatActivity {
     EditText carnetTxt, codMateriaTxt, cicloTxt, notaTxt;
     //URL.
-    private final String urlLocal ="http://192.168.1.8/av12013/ws_nota_insert.php";
+    private final String urlLocal ="http://192.168.1.8/av12013/ws_dato_insert.php";
 
     @SuppressLint("NewApi")
     @Override

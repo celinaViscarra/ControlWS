@@ -29,7 +29,7 @@ public class ControlBDAlumno {
                 db.execSQL("CREATE TABLE alumno(carnet VARCHAR(7) NOT NULL PRIMARY KEY, nombre VARCHAR(30)," +
                         "apellido VARCHAR(30), sexo VARCHAR(1), matganada INTEGER);");
                 db.execSQL("CREATE TABLE materia(codmateria VARCHAR(6) NOT NULL PRIMARY KEY," +
-                        "nommateria, VARCHAR(30), unidadesval VARCHAR(1);");
+                        "nommateria VARCHAR(30), unidadesval VARCHAR(1));");
                 db.execSQL("CREATE TABLE nota(carnet VARCHAR(7) NOT NULL, codmateria VARCHAR(6) NOT NULL, " +
                         "ciclo VARCHAR(5), notafinal REAl, PRIMARY KEY(carnet, codmateria, ciclo));");
             } catch (SQLException e) {
